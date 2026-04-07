@@ -37,12 +37,12 @@ export default function Footer() {
 
         {/* ── Bottom Row ──────────────────────────────────── */}
         <div className={styles.bottomRow}>
-          <Link href="/" aria-label="Teach For All Home" className={styles.footerLogo}>
+          <Link href="/" aria-label="Foundation for African Empowerment Home" className={styles.footerLogo}>
             <LogoSvg variant="white" />
           </Link>
 
           <p className={styles.copyright}>
-            © {year} Teach For All —{' '}
+            © {year} Foundation for African Empowerment —{' '}
             <Link href="/privacy-policy">Privacy Policy</Link>
             {' '}|{' '}
             <Link href="/financials">Financials</Link>
