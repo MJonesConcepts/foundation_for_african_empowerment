@@ -1,0 +1,107 @@
+.section {
+  background-color: var(--fae-light-green);
+  padding: 4rem 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.title {
+  font-family: var(--ff-heading);
+  font-weight: 700;
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  color: var(--fae-grey-3);
+  margin-bottom: 2rem;
+}
+
+/* ── Grid ─────────────────────────────────── */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 576px) {
+  .grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 992px) {
+  .grid { grid-template-columns: repeat(4, 1fr); }
+}
+
+/* ── Card ─────────────────────────────────── */
+.card {
+  background: #fff;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s;
+}
+
+.card:hover { transform: translateY(-4px); }
+
+.cardImageLink { display: block; }
+
+.cardImageWrapper {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.cardImage {
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.card:hover .cardImage { transform: scale(1.03); }
+
+.cardBody {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.cardCategory {
+  font-family: var(--ff-heading);
+  font-weight: 700;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--fae-green);
+  margin-bottom: 0.4rem;
+}
+
+.cardTitle {
+  font-family: var(--ff-heading);
+  font-size: 0.92rem;
+  font-weight: 700;
+  line-height: 1.5;
+  flex: 1;
+}
+
+.cardTitleLink {
+  color: var(--fae-grey-3);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.cardTitleLink:hover { color: var(--fae-green); }
+
+.cardDate {
+  display: block;
+  margin-top: 0.75rem;
+  font-size: 0.78rem;
+  color: #888;
+}
+
+/* ── See All CTA ──────────────────────────── */
+.seeAll {
+  text-align: center;
+  padding-top: 2rem;
+}

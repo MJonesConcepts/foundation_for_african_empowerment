@@ -1,0 +1,117 @@
+.footer {
+  background: var(--fae-grey-3);
+  color: #ccc;
+  padding: 3rem 0 1.5rem;
+  font-size: 0.82rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* ── Columns ──────────────────────────────── */
+.columns {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+@media (min-width: 576px) {
+  .columns { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (min-width: 992px) {
+  .columns { grid-template-columns: repeat(5, 1fr); }
+}
+
+.colHeading {
+  font-family: var(--ff-heading);
+  font-weight: 700;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--fae-green);
+  margin-bottom: 0.75rem;
+}
+
+.colHeading a {
+  color: var(--fae-green);
+  text-decoration: none;
+}
+
+.colHeading a:hover { text-decoration: underline; }
+
+.colList { list-style: none; }
+
+.colLink {
+  display: block;
+  color: #bbb;
+  text-decoration: none;
+  font-size: 0.8rem;
+  line-height: 1.6;
+  padding: 0.2rem 0;
+  transition: color 0.15s;
+}
+
+.colLink:hover { color: #fff; }
+
+/* ── Divider ──────────────────────────────── */
+.divider {
+  border: none;
+  border-top: 1px solid rgba(42, 175, 167, 0.4);
+  margin: 1.5rem 0;
+}
+
+/* ── Bottom Row ───────────────────────────── */
+.bottomRow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+}
+
+@media (min-width: 992px) {
+  .bottomRow {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+}
+
+.footerLogo {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.copyright {
+  color: #888;
+  font-size: 0.75rem;
+}
+
+.copyright a {
+  color: #aaa;
+  text-decoration: none;
+}
+
+.copyright a:hover { color: #fff; }
+
+.social {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.socialLink {
+  color: var(--fae-green);
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.2s;
+  width: 28px;
+  text-align: center;
+}
+
+.socialLink:hover { color: #fff; }

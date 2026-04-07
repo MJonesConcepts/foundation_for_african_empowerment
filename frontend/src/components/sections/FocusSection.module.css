@@ -1,0 +1,266 @@
+.section {
+  margin: 6rem 0;
+}
+
+/* ── Two-column layout ────────────────────────────── */
+.layout {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+@media (min-width: 992px) {
+  .inner {
+    flex-direction: row-reverse; /* video right, text left */
+    gap: 3rem;
+    align-items: center;
+  }
+}
+
+.carouselCol {
+  width: 100%;
+}
+
+
+.contentCol {
+  flex: 1;
+}
+
+/* ── Section title ────────────────────────────────── */
+.sectionTitle {
+  font-family: var(--ff-heading);
+  font-weight: 700;
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  color: var(--fae-grey-3);
+  margin-bottom: 1rem;
+}
+
+.sectionIntro {
+  font-size: 1rem;
+  line-height: 1.75;
+  margin-bottom: 1.5rem;
+  color: #555;
+}
+
+/* ── Image slider ─────────────────────────────────── */
+.imageSlider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.imageTrack {
+  display: flex;
+  align-items: stretch;
+  gap: 20px;
+}
+
+/* Active (center) slide */
+.activeSlide {
+  position: relative;
+  flex: 0 0 60%;
+  aspect-ratio: 3 / 2;
+  border-radius: 4px;
+  overflow: hidden;
+  transition: flex 0.5s ease;
+}
+
+/* Side slides */
+.sideSlide {
+  position: relative;
+  flex: 0 0 calc(20% - 10px);
+  aspect-ratio: 3 / 2;
+  border-radius: 4px;
+  overflow: hidden;
+  cursor: pointer;
+  opacity: 0.55;
+  transition: opacity 0.3s, flex 0.5s ease;
+  filter: brightness(0.8);
+}
+
+.sideSlide:hover {
+  opacity: 0.8;
+}
+
+.slideImage {
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.5s ease;
+}
+
+.activeSlide .slideImage {
+  transform: scale(1);
+}
+
+.sideSlide:hover .slideImage {
+  transform: scale(1.03);
+}
+
+@media (max-width: 768px) {
+  .layout {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .carouselCol {
+    flex: 0 0 100%;
+    width: 100%;
+  }
+
+  .imageTrack {
+    gap: 0;
+  }
+
+  .activeSlide {
+    flex: 0 0 100%;
+    border-radius: 0;
+  }
+
+  .sideSlide {
+    display: none;
+  }
+}
+
+/* ── Controls ─────────────────────────────────────── */
+.controls {
+  position: absolute;
+  bottom: 1.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  z-index: 10;
+}
+
+.controlBtn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+  backdrop-filter: blur(4px);
+}
+
+.controlBtn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: #fff;
+}
+
+.controlBtn svg {
+  width: 18px;
+  height: 18px;
+}
+
+.playBtn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s;
+  backdrop-filter: blur(4px);
+}
+
+.playBtn:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.playBtn svg {
+  width: 14px;
+  height: 14px;
+}
+
+/* ── Text content ─────────────────────────────────── */
+.textWrap {
+  text-align: center;
+}
+
+.textSlide {
+  animation: fadeIn 0.4s ease;
+}
+
+.textFade {
+  animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.slideHeading {
+  font-family: var(--ff-heading);
+  font-weight: 700;
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
+  color: var(--fae-grey-3);
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.slideBody {
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.ctaBtn {
+  display: inline-block;
+  background-color: var(--fae-green);
+  color: #fff;
+  font-family: var(--ff-heading);
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 10px 28px;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: opacity 0.2s;
+}
+
+.ctaBtn:hover { opacity: 0.85; }
+
+/* ── Dot indicators ───────────────────────────────── */
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1.75rem;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ccc;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+  padding: 0;
+}
+
+.dotActive {
+  background: var(--fae-green);
+  transform: scale(1.3);
+}

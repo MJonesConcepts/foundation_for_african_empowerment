@@ -1,0 +1,66 @@
+.btn {
+  display: inline-block;
+  font-family: var(--ff-heading);
+  font-weight: 700;
+  font-size: 0.88rem;
+  border-radius: var(--radius-sm);
+  padding: 10px 28px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: opacity 0.2s, background 0.2s, color 0.2s;
+  border: none;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Variants */
+.primary {
+  background-color: var(--tfa-red);
+  color: #fff;
+}
+
+.primary:hover:not(:disabled) { opacity: 0.85; }
+
+.secondary {
+  background-color: var(--tfa-teal);
+  color: #fff;
+}
+
+.secondary:hover:not(:disabled) { opacity: 0.85; }
+
+.outline {
+  background: transparent;
+  border: 2px solid var(--tfa-grey-3);
+  color: var(--tfa-grey-3);
+  padding: 8px 26px;
+}
+
+.outline:hover:not(:disabled) {
+  background: var(--tfa-grey-3);
+  color: #fff;
+}
+
+.donate {
+  background-color: var(--tfa-red);
+  color: #fff;
+  font-size: 0.82rem;
+  padding: 6px 16px;
+}
+
+.donate:hover:not(:disabled) { opacity: 0.85; }
+
+.card {
+  background: transparent;
+  border: 2px solid var(--tfa-grey-3);
+  color: var(--tfa-grey-3);
+  font-size: 0.8rem;
+  padding: 6px 20px;
+}
+
+.card:hover:not(:disabled) {
+  background: var(--tfa-grey-3);
+  color: #fff;
+}

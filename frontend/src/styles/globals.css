@@ -1,0 +1,107 @@
+/* =============================================
+   GLOBAL / DESIGN TOKENS
+============================================= */
+:root {
+  --fae-primary:        #F16315;
+  --fae-light-primary:  #fdf5ed;
+  --fae-green:          #637D31;
+  --fae-gold:           #f1d222;
+  --fae-red:            #CE4652;
+  --fae-dark:           #212e20;
+  --fae-grey-3:         #333333;
+  --fae-light-red:      #fce8e9;
+  --fae-light-orange:   #fdf0e3;
+  --fae-light-green:    #cbd4a3;
+  --fae-light-grey:     #f2f2f2;
+  --ff-heading:         'Montserrat', sans-serif;
+  --ff-body:            'Lato', sans-serif;
+
+  /* Spacing scale */
+  --space-xs:   0.25rem;
+  --space-sm:   0.5rem;
+  --space-md:   1rem;
+  --space-lg:   2rem;
+  --space-xl:   3rem;
+  --space-2xl:  5rem;
+
+  /* Border radius */
+  --radius-sm:  4px;
+  --radius-md:  6px;
+  --radius-lg:  8px;
+
+  /* Shadows */
+  --shadow-sm:  0 2px 8px rgba(0,0,0,0.08);
+  --shadow-md:  0 4px 16px rgba(0,0,0,0.09);
+  --shadow-lg:  0 4px 20px rgba(0,0,0,0.25);
+}
+
+/* =============================================
+   RESET & BASE
+============================================= */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--ff-body);
+  color: var(--fae-grey-3);
+  background: #fff;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--ff-heading);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+/* =============================================
+   UTILITY CLASSES
+============================================= */
+.text-green   { color: var(--fae-green); }
+.text-red    { color: var(--fae-red); }
+.text-dark   { color: var(--fae-dark); }
+
+.bg-green            { background-color: var(--fae-green); }
+.bg-dark            { background-color: var(--fae-grey-3); }
+.bg-light-red       { background-color: var(--fae-light-red); }
+.bg-light-green      { background-color: var(--fae-light-green); }
+.bg-light-orange    { background-color: var(--fae-light-orange); }
+.bg-light-grey      { background-color: var(--fae-light-grey); }
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

@@ -1,0 +1,89 @@
+.section {
+  background-color: var(--fae-light-green);
+  padding-bottom: 3rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 2.5rem 0;
+}
+
+@media (min-width: 992px) {
+  .inner {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 3rem;
+  }
+}
+
+/* ── Title column ─────────────────────────── */
+.titleCol {
+  flex-shrink: 0;
+}
+
+@media (min-width: 992px) {
+  .titleCol { width: 220px; }
+}
+
+.title {
+  font-family: var(--ff-heading);
+  font-weight: 700;
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  color: var(--fae-grey-3);
+  line-height: 1.1;
+}
+
+/* ── Content column ───────────────────────── */
+.contentCol { flex: 1; }
+
+.intro {
+  font-size: 0.95rem;
+  max-width: 600px;
+  line-height: 1.75;
+  margin-bottom: 1.5rem;
+}
+
+/* ── Map placeholder ──────────────────────── */
+.mapPlaceholder {
+  background: #c8dce0;
+  border-radius: var(--radius-lg);
+  height: 420px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  color: #456;
+}
+
+.mapIcon { font-size: 3rem; }
+
+.mapTitle {
+  font-family: var(--ff-heading);
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--fae-green);
+}
+
+.mapSubtitle {
+  font-size: 0.88rem;
+}
+
+.mapNote {
+  font-size: 0.78rem;
+  color: #678;
+  margin-top: 0.25rem;
+}
+
+/* ── CTA ──────────────────────────────────── */
+.cta {
+  margin-top: 1.5rem;
+}
