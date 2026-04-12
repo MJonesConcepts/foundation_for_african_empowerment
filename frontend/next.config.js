@@ -1,14 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  images: {},
-  // Proxy API calls to the Express backend during development
-  async rewrites() {
-    return [
+  images: {
+    remotePatterns: [
       {
-        source: '/api/:path*',
-        destination: 'http://localhost:4000/api/:path*',
+        protocol: 'https',
+        hostname: 'mariosonline.site',
       },
-    ];
+    ],
   },
 };
 

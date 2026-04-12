@@ -66,7 +66,7 @@ const NEWS_CARDS: NewsCard[] = [
 const SPOTLIGHT_SLIDES: FocusSlide[] = [
   {
     id: '1',
-    imageSrc: '/media/focus/slide-1.jpg',
+    imageSrc: 'https://mariosonline.site/images/fae/slide-1.jpg',
     imageAlt: 'Description of image one',
     heading: 'Your First Focus Heading',
     body: 'Write a short description here about this focus item. Keep it concise and compelling.',
@@ -75,7 +75,7 @@ const SPOTLIGHT_SLIDES: FocusSlide[] = [
   },
   {
     id: '2',
-    imageSrc: '/media/focus/slide-2.jpg',
+    imageSrc: 'https://mariosonline.site/images/fae/slide-2.jpg',
     imageAlt: 'Description of image two',
     heading: 'Your Second Focus Heading',
     body: 'Write a short description here about this focus item. Keep it concise and compelling.',
@@ -84,7 +84,7 @@ const SPOTLIGHT_SLIDES: FocusSlide[] = [
   },
   {
     id: '3',
-    imageSrc: '/media/focus/slide-3.jpg',
+    imageSrc: 'https://mariosonline.site/images/fae/slide-3.jpg',
     imageAlt: 'Description of image three',
     heading: 'Your Third Focus Heading',
     body: 'Write a short description here about this focus item. Keep it concise and compelling.',
@@ -93,7 +93,7 @@ const SPOTLIGHT_SLIDES: FocusSlide[] = [
   },
   {
     id: '4',
-    imageSrc: '/media/focus/slide-4.jpg',
+    imageSrc: 'https://mariosonline.site/images/fae/slide-4.jpg',
     imageAlt: 'Description of image four',
     heading: 'Your Fourth Focus Heading',
     body: 'Write a short description here about this focus item. Keep it concise and compelling.',
