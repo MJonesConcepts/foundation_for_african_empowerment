@@ -7,6 +7,7 @@ import NewsletterBand from '@/components/sections/NewsletterBand';
 import type { NewsCard } from '@/types';
 import FocusSection from '@/components/sections/FocusSection';
 import type { FocusSlide } from '@/components/sections/FocusSection';
+import { info } from 'console';
 
 export const metadata: Metadata = {
   title: 'Home',
@@ -20,46 +21,46 @@ const NEWS_CARDS: NewsCard[] = [
   {
     id: '1',
     title:
-      'Creating an Island of Stability: How Teach For Ukraine Fellows support learning amidst blackouts and bitter cold',
+      'Get involved and change a life! ',
     href: '/news/teach-for-ukraine-stability',
     imageSrc:
-      '/media/news/ukraine-fellows.jpg',
-    imageAlt: 'Teach For Ukraine fellow in classroom',
+      '/media/news/DSC05969.jpg',
+    imageAlt: 'Get involved with FAE and change a life',
     date: '2026-01-15',
-    category: 'Stories',
+    category: 'Impact',
   },
   {
     id: '2',
     title:
-      'From rubble to system change: A STEAM journey rooted in community and leadership',
+      'Participatory approach helped to identify three priority projects at Chemka Village School in Tanzania',
     href: '/news/steam-journey-system-change',
     imageSrc:
-      '/media/news/steam-journey.jpg',
-    imageAlt: 'Students working on a STEAM project',
+      '/media/news/IMG_7228.jpg',
+    imageAlt: 'Chemka Village School in Tanzania',
     date: '2026-02-03',
     category: 'Impact',
   },
   {
     id: '3',
     title:
-      'We are the system: Why the future of education must be created with youth',
+      'Women and young people at Rundugai Village in Kilimanjaro region are geared towards improving access to education for children',
     href: '/news/future-of-education-youth',
     imageSrc:
-      '/media/news/youth-education.png',
-    imageAlt: 'Young person speaking at a conference',
+      '/media/news/IMG-20161014-WA0025.jpg',
+    imageAlt: 'Access to education for children',
     date: '2025-06-20',
-    category: 'Blog',
+    category: 'Impact',
   },
   {
     id: '4',
     title:
-      'From Innovation to Insight: Exploring teacher development for holistic student growth through the Action Learning Framework in Colombia',
+      'Why not join our Board of Directors?',
     href: '/news/action-learning-framework-colombia',
     imageSrc:
-      '/media/news/colombia-framework.jpg',
+      '/media/news/join-the-board.jpg',
     imageAlt: 'Teachers in a professional development workshop in Colombia',
     date: '2026-02-10',
-    category: 'Research',
+    category: 'Recruiting',
   },
 ];
 
@@ -68,8 +69,8 @@ const SPOTLIGHT_SLIDES: FocusSlide[] = [
     id: '1',
     imageSrc: 'https://mariosonline.site/images/fae/slide-1.jpg',
     imageAlt: 'Description of image one',
-    heading: 'Your First Focus Heading',
-    body: 'Write a short description here about this focus item. Keep it concise and compelling.',
+    heading: 'Join our team and make a difference',
+    body: 'We are currently recruiting more Board members and Advisers. \nIf you are interested to become our Board member or Adviser, please  send a letter of interest and your CV to us today at email: info@thefaeafrica.org.',
     ctaLabel: 'Learn More',
     ctaHref: '/your-link',
   },
